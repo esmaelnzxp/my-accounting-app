@@ -845,7 +845,7 @@ function App() {
 
   const openNoteFile = (filePath) => {
     if (filePath) {
-      const url = `http://localhost:8000/uploads/${filePath.replace(/\\/g, '/')}`;
+      const url = `https://accounting-backend-pgbt.onrender.com/${filePath.replace(/\\/g, '/')}`;
       window.open(url, '_blank');
     }
   };
@@ -1095,7 +1095,7 @@ function App() {
     try {
       const token = localStorage.getItem('token');
       
-      const response = await fetch('http://localhost:8000/api/templates', {
+      const response = await fetch('${API_URL}/templates', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -1193,7 +1193,7 @@ function App() {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       if (response.data.url) {
-        window.open(`http://localhost:8000${response.data.url}`, '_blank');
+        window.open(`https://accounting-backend-pgbt.onrender.com${response.data.url}`, '_blank');
       }
     } catch (error) {
       console.error('خطا در باز کردن فایل:', error);
