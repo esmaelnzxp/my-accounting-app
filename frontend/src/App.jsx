@@ -5,7 +5,7 @@ import moment from 'moment-jalaali';
 moment.locale('fa');
 moment.loadPersian({ dialect: 'persian-modern' });
 
-const API_URL = 'http://localhost:8000/api';
+const API_URL = 'https://accounting-backend-pgbt.onrender.com/api';
 
 const toJalaali = (dateStr) => {
   if (!dateStr) return '';
