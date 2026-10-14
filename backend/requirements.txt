@@ -8,4 +8,4 @@ python-jose[cryptography]
 jdatetime
 python-multipart
 pytimeir
-psycopg2-binary
+psycopg[binary]
