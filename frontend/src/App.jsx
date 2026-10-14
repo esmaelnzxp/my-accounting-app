@@ -1095,7 +1095,7 @@ function App() {
     try {
       const token = localStorage.getItem('token');
       
-      const response = await fetch('${API_URL}/templates', {
+      const response = await fetch(`${API_URL}/templates`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`,
