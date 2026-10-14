@@ -9,3 +9,4 @@ jdatetime
 python-multipart
 pytimeir
 psycopg[binary]
+psycopg2-binary
