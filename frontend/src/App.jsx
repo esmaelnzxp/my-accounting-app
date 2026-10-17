@@ -845,7 +845,12 @@ function App() {
 
   const openNoteFile = (filePath) => {
     if (filePath) {
-      const url = `https://accounting-backend-pgbt.onrender.com/${filePath.replace(/\\/g, '/')}`;
+      // اگر مسیر از قبل با uploads شروع نشده بود، اضافه کن
+      let cleanPath = filePath.replace(/\\/g, '/');
+      if (!cleanPath.startsWith('uploads/')) {
+        cleanPath = `uploads/${cleanPath}`;
+      }
+      const url = `https://accounting-backend-pgbt.onrender.com/${cleanPath}`;
       window.open(url, '_blank');
     }
   };
